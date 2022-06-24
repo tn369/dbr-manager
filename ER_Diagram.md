@@ -15,6 +15,7 @@ pleyers{
     string email
     string name
     string url
+    string encrypt_password 
 }
 
 rivals{
@@ -30,6 +31,7 @@ pleyer_scores{
     number pika_great
     number great
     number bp
+    number combo_break
     number clear_lamp
 }
 
