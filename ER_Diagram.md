@@ -14,70 +14,70 @@ musics }o--|| versions: ""
 charts ||--o{ pleyers_scores:""
 
 pleyers{
-    number pleyer_id
-    string iidx_id
-    string email
-    string name
-    string url
-    string encrypt_password 
+    integer pleyer_id
+    char_8 iidx_id
+    varchar_100 email
+    varchar_6 name
+    varchar_100 url
+    varchar_100 encrypt_password 
 }
 
 rivals {
-    number pleyer_id
-    number rival_id
+    char_8 pleyer_id
+    char_8 rival_id
 }
 
 pleyers_scores {
-    number pleyer_id
-    string song_id
-    number difficulty_id
+    char_8 pleyer_id
+    varchar_100 song_id
+    char_1 difficulty_id
     datetime play_at
-    number option_id
-    number pika_great
-    number great
-    number bp
-    number combo_break
-    number clear_lamp
-    string memo
+    integer option_id
+    integer pika_great
+    integer great
+    integer bp
+    integer combo_break
+    integer clear_lamp
+    varchar_100 memo
 }
 
 clear_lamps {
-    number clear_lamp_id
-    string name
+    integer clear_lamp_id
+    varchar_10 name
 }
 
 options {
-    number option_id
-    string name
+    integer option_id
+    varchar_10 name
 }
 
 musics {
-    string music_id 
-    number version_id
-    string title
-    string genre
-    string artist
+    varchar_50 music_id 
+    integer version_id
+    varchar_100 title
+    varchar_100 genre
+    varchar_100 artist
 }
 
 versions {
-    number version_id
-    string name
+    integer version_id
+    varchar_50 name
 }
 
 charts {
-    string song_id
-    number difficulty_id
-    number level
-    number bpm
-    number notes_total
-    number notes_scratch 
-    number notes_charge
-    number notes_backspin
+    varchar_50 song_id
+    integer difficulty_id
+    integer level
+    integer bpm
+    integer notes_total
+    integer notes_scratch 
+    integer notes_charge
+    integer notes_backspin
 }
 
 difficulties {
-    number difficulty_id 
-    string name
+    integer difficulty_id 
+    varchar_15 name
 }
 
 ```
