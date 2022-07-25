@@ -14,70 +14,74 @@ musics }o--|| versions: ""
 charts ||--o{ pleyers_scores:""
 
 pleyers{
-    number pleyer_id
-    string iidx_id
-    string email
-    string name
-    string url
-    string encrypt_password 
+    serial pleyer_id 
+    numeric_8_0 iidx_id
+    varchar_319 email
+    varchar_6 name
+    text url
+    char_64 encrypt_password 
+    char_32 salt 
 }
 
 rivals {
-    number pleyer_id
-    number rival_id
+    serial pleyer_id
+    serial rival_id
 }
 
 pleyers_scores {
-    number pleyer_id
-    string song_id
-    number difficulty_id
-    datetime play_at
-    number option_id
-    number pika_great
-    number great
-    number bp
-    number combo_break
-    number clear_lamp
-    string memo
+    serial pleyer_id
+    varchar_8 music_id
+    smallint difficulty_id
+    timestamp play_at
+    smallint option_id_left
+    smallint option_id_right
+    boolean legacy
+    boolean auto_scratch
+    smallint pika_great
+    smallint great
+    smallint bp
+    smallint combo_break
+    smallint clear_lamp_id
+    text memo
 }
 
 clear_lamps {
-    number clear_lamp_id
-    string name
+    smallint clear_lamp_id
+    varchar_10 name
 }
 
 options {
-    number option_id
-    string name
+    smallint option_id
+    varchar_20 name
 }
 
 musics {
-    string music_id 
-    number version_id
-    string title
-    string genre
-    string artist
+    varchar_8 music_id 
+    smallint version_id
+    varchar_100 title
+    varchar_100 genre
+    varchar_100 artist
 }
 
 versions {
-    number version_id
-    string name
+    smallint version_id
+    varchar_50 name
 }
 
 charts {
-    string song_id
-    number difficulty_id
-    number level
-    number bpm
-    number notes_total
-    number notes_scratch 
-    number notes_charge
-    number notes_backspin
+    varchar_8 music_id
+    smallint difficulty_id
+    smallint level
+    smallint bpm
+    smallint notes_total
+    smallint notes_scratch 
+    smallint notes_charge
+    smallint notes_backspin
 }
 
 difficulties {
-    number difficulty_id 
-    string name
+    smallint difficulty_id 
+    varchar_15 name
 }
 
 ```
