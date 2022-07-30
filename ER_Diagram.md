@@ -15,12 +15,12 @@ charts ||--o{ players_scores:""
 
 players{
     serial player_id
-    numeric_8_0 iidx_id
-    varchar_319 email
-    varchar_6 name
+    numeric iidx_id "8,0"
+    varchar email "319"
+    varchar name "6"
     text url
-    char_64 encrypt_password
-    char_32 salt
+    char encrypt_password "64"
+    char salt "32"
 }
 
 rivals {
@@ -30,7 +30,7 @@ rivals {
 
 players_scores {
     serial player_id
-    varchar_8 music_id
+    varchar music_id "8"
     smallint difficulty_id
     timestamp play_at
     smallint option_id_left
@@ -47,29 +47,29 @@ players_scores {
 
 clear_lamps {
     smallint clear_lamp_id
-    varchar_10 name
+    varchar name "10"
 }
 
 options {
     smallint option_id
-    varchar_20 name
+    varchar name "20"
 }
 
 musics {
-    varchar_8 music_id
+    varchar music_id "8"
     smallint version_id
-    varchar_100 title
-    varchar_100 genre
-    varchar_100 artist
+    varchar title "100"
+    varchar genre "100"
+    varchar artist "100"
 }
 
 versions {
     smallint version_id
-    varchar_50 name
+    varchar name "50"
 }
 
 charts {
-    varchar_8 music_id
+    varchar music_id "8"
     smallint difficulty_id
     smallint level
     smallint bpm
@@ -81,7 +81,7 @@ charts {
 
 difficulties {
     smallint difficulty_id
-    varchar_15 name
+    varchar name "15"
 }
 
 ```
