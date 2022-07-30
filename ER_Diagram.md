@@ -4,17 +4,17 @@
 
 erDiagram
 
-pleyers ||--o{ pleyers_scores: ""
-pleyers ||--o{ rivals: ""
-pleyers_scores }o--|| options :""
-pleyers_scores }o--|| clear_lamps:""
+players ||--o{ players_scores: ""
+players ||--o{ rivals: ""
+players_scores }o--|| options :""
+players_scores }o--|| clear_lamps:""
 charts }o--|| difficulties:""
 musics ||--|{ charts: ""
 musics }o--|| versions: ""
-charts ||--o{ pleyers_scores:""
+charts ||--o{ players_scores:""
 
-pleyers{
-    serial pleyer_id 
+players{
+    serial player_id
     numeric_8_0 iidx_id
     varchar_319 email
     varchar_6 name
@@ -24,12 +24,12 @@ pleyers{
 }
 
 rivals {
-    serial pleyer_id
+    serial player_id
     serial rival_id
 }
 
-pleyers_scores {
-    serial pleyer_id
+players_scores {
+    serial player_id
     varchar_8 music_id
     smallint difficulty_id
     timestamp play_at
