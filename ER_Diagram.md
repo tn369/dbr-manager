@@ -19,8 +19,8 @@ players{
     varchar_319 email
     varchar_6 name
     text url
-    char_64 encrypt_password 
-    char_32 salt 
+    char_64 encrypt_password
+    char_32 salt
 }
 
 rivals {
@@ -56,7 +56,7 @@ options {
 }
 
 musics {
-    varchar_8 music_id 
+    varchar_8 music_id
     smallint version_id
     varchar_100 title
     varchar_100 genre
@@ -74,13 +74,13 @@ charts {
     smallint level
     smallint bpm
     smallint notes_total
-    smallint notes_scratch 
+    smallint notes_scratch
     smallint notes_charge
     smallint notes_backspin
 }
 
 difficulties {
-    smallint difficulty_id 
+    smallint difficulty_id
     varchar_15 name
 }
 
