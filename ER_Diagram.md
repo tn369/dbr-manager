@@ -35,8 +35,8 @@ players_scores {
     timestamp play_at PK
     smallint option_id_left FK
     smallint option_id_right FK
-    boolean legacy FK
-    boolean auto_scratch FK
+    boolean legacy 
+    boolean auto_scratch 
     smallint pika_great
     smallint great
     smallint bp
