@@ -14,7 +14,7 @@ musics }o--|| versions: ""
 charts ||--o{ players_scores:""
 
 players{
-    serial player_id
+    serial player_id PK
     numeric iidx_id "8,0"
     varchar email "319"
     varchar name "6"
@@ -24,19 +24,19 @@ players{
 }
 
 rivals {
-    serial player_id
-    serial rival_id
+    serial player_id PK
+    serial rival_id PK
 }
 
 players_scores {
-    serial player_id
-    varchar music_id "8"
-    smallint difficulty_id
-    timestamp play_at
-    smallint option_id_left
-    smallint option_id_right
-    boolean legacy
-    boolean auto_scratch
+    serial player_id PK
+    varchar music_id PK "8"
+    smallint difficulty_id PK
+    timestamp play_at PK
+    smallint option_id_left FK
+    smallint option_id_right FK
+    boolean legacy FK
+    boolean auto_scratch FK
     smallint pika_great
     smallint great
     smallint bp
@@ -46,31 +46,31 @@ players_scores {
 }
 
 clear_lamps {
-    smallint clear_lamp_id
+    smallint clear_lamp_id PK
     varchar name "10"
 }
 
 options {
-    smallint option_id
+    smallint option_id PK
     varchar name "20"
 }
 
 musics {
-    varchar music_id "8"
-    smallint version_id
+    varchar music_id PK "8"
+    smallint version_id FK
     varchar title "100"
     varchar genre "100"
     varchar artist "100"
 }
 
 versions {
-    smallint version_id
+    smallint version_id PK
     varchar name "50"
 }
 
 charts {
-    varchar music_id "8"
-    smallint difficulty_id
+    varchar music_id PK "8"
+    smallint difficulty_id PK
     smallint level
     smallint bpm
     smallint notes_total
@@ -80,7 +80,7 @@ charts {
 }
 
 difficulties {
-    smallint difficulty_id
+    smallint difficulty_id PK
     varchar name "15"
 }
 
